@@ -55,7 +55,7 @@ def has_production_and_consumption(json):
 
 
 def has_metering_setup(json):
-    """Check if Active Count of Production CTs (eim) installed is greater than one."""
+    """Check if Active Count of Production CTs (eim) installed is non-zero."""
     return json["production"][1]["activeCount"] > 0
 
 
