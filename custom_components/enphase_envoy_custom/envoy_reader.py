@@ -136,9 +136,7 @@ class EnvoyReader:  # pylint: disable=too-many-instance-attributes
         """Update the data."""
         if self.endpoint_type == ENVOY_MODEL_S:
             await self._update_from_pc_endpoint()
-        if self.endpoint_type == ENVOY_MODEL_C or (
-            self.endpoint_type == ENVOY_MODEL_S and not self.isMeteringEnabled
-        ):
+        if self.endpoint_type == ENVOY_MODEL_C:
             await self._update_from_p_endpoint()
         if self.endpoint_type == ENVOY_MODEL_LEGACY:
             await self._update_from_p0_endpoint()
